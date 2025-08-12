@@ -92,15 +92,11 @@ if search_phone.strip():
     if filtered_df.empty:
         st.info("Клиент не найден.")
     else:
-        # st.dataframe(filtered_df)
-        # st.write(style_table(df), unsafe_allow_html=True)
-        #st.dataframe(df, width=2000, height=600)
-        st.write(style_table(filtered_df), unsafe_allow_html=True)
+        st.dataframe(filtered_df)
+        
 else:
-    # st.dataframe(df)
-    # st.write(style_table(df), unsafe_allow_html=True)
-    #st.dataframe(df, width=2000, height=600)
-    st.write(style_table(df), unsafe_allow_html=True)
+    st.dataframe(df)
+    
 
 st.markdown("---")
 st.write("Удаление записей")
