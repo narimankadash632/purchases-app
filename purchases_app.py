@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import os
-
+#Расширяем отображаемость таблички по ширине
+def style_table(df):
+    return df.style.set_table_styles([
+        {'selector': 'th', 'props': [('min-width', '150px')]},
+        {'selector': 'td', 'props': [('min-width', '150px')]},
+    ])
+    
 FILE_NAME = "purchases.csv"
 
 COLUMNS = [
@@ -88,11 +94,13 @@ if search_phone.strip():
     else:
         # st.dataframe(filtered_df)
         # st.write(style_table(df), unsafe_allow_html=True)
-        st.dataframe(df, width=2000, height=600)
+        #st.dataframe(df, width=2000, height=600)
+        st.write(style_table(filtered_df), unsafe_allow_html=True)
 else:
     # st.dataframe(df)
     # st.write(style_table(df), unsafe_allow_html=True)
-    st.dataframe(df, width=2000, height=600)
+    #st.dataframe(df, width=2000, height=600)
+    st.write(style_table(df), unsafe_allow_html=True)
 
 st.markdown("---")
 st.write("Удаление записей")
