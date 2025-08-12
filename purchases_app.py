@@ -2,12 +2,6 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import os
-#Расширяем отображаемость таблички по ширине
-def style_table(df):
-    return df.style.set_table_styles([
-        {'selector': 'th', 'props': [('min-width', '150px')]},
-        {'selector': 'td', 'props': [('min-width', '150px')]},
-    ])
     
 FILE_NAME = "purchases.csv"
 
