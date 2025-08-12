@@ -88,11 +88,11 @@ if search_phone.strip():
     else:
         # st.dataframe(filtered_df)
         # st.write(style_table(df), unsafe_allow_html=True)
-        st.dataframe(df, width=1200, height=600)
+        st.dataframe(df, width=2000, height=600)
 else:
     # st.dataframe(df)
     # st.write(style_table(df), unsafe_allow_html=True)
-    st.dataframe(df, width=1200, height=600)
+    st.dataframe(df, width=2000, height=600)
 
 st.markdown("---")
 st.write("Удаление записей")
